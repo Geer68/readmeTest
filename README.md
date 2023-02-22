@@ -12,15 +12,15 @@ Al abrir en PC o pantallas superiores de 1024px se agrega un gráfico de "anillo
 
 La función `calculate()` es la que inicia todo el proceso de clasificar a los participantes ingresados por el usuario recibiendo el precio o la sumatoria de los montos, `separateUsers()` los separa en "deudor" o "prestador" de dinero, `prestadorDeudor()` se encarga de crear un array de resultados.
 
-Para la parte de modificación/eliminación de los usuarios, cada botón generado en el DOM cuenta con el evento y su parámetro correspondiente (id de participante). Tanto `deleteParticipant(id)` como `editModal(id)` buscan este id en el array "participants", permiten la eliminación del participante o su cambio de nombre/monto mediante inputs que actualizan el array principal "participants".
+Para la parte de modificación/eliminación de los usuarios, cada botón generado en el DOM cuenta con el evento y su parámetro correspondiente (id de participante). Tanto `deleteParticipant(id)` como `editModal(id)` buscan este id en el array *participants*, permiten la eliminación del participante o su cambio de nombre/monto mediante inputs que actualizan el array principal *participants*.
 
 Para mostrar los resultados de esta división se divide en 2 partes:
-    1. Mostrar los resultados "numéricos"
-    2. Mostrar el listado de participantes
+1. Mostrar los resultados "numéricos"
+2. Mostrar el listado de participantes
 Para los resultados numéricos se implementa `showResult(total, balanceSheet, participants, porPersona)` llamada por `prestadorDeudor()` que modifica el DOM en base a los parámetros recibidos. 
-Para el listado de participantes se implementa la función `showParticipants(participants)` que recibe como parámetro el array principal "participants".
+Para el listado de participantes se implementa la función `showParticipants(participants)` que recibe como parámetro el array principal *participants*.
 
-Por cada modificación/eliminación/creación de usuario estas funciones son llamadas nuevamente para actualizar el array "participants" y volver a calcular el estado de cada participante.
+Por cada modificación/eliminación/creación de usuario estas funciones son llamadas nuevamente para actualizar el array *participants* y volver a calcular el estado de cada participante.
 
 ## Funciones asincrónicas
 
