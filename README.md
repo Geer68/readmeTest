@@ -17,6 +17,7 @@ Para la parte de modificación/eliminación de los usuarios, cada botón generad
 Para mostrar los resultados de esta división se divide en 2 partes:
 1. Mostrar los resultados "numéricos"
 2. Mostrar el listado de participantes
+
 Para los resultados numéricos se implementa `showResult(total, balanceSheet, participants, porPersona)` llamada por `prestadorDeudor()` que modifica el DOM en base a los parámetros recibidos. 
 Para el listado de participantes se implementa la función `showParticipants(participants)` que recibe como parámetro el array principal *participants*.
 
